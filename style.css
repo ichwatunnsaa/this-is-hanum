@@ -11,9 +11,6 @@
 
 /* Reset */
 *{
-
-/* Reset */
-*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -183,7 +180,6 @@ body{
     margin-bottom: 40px;
 }
 
-
 .card-wrapper{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -227,9 +223,10 @@ body{
 
 .card-text{
     display: none;
-    margin-top: 12px;
-    line-height: 1.8;
-    max-width: 260px;   
+    margin: 12px auto 0;
+    line-height: 1.8px;
+    max-width: 260px;
+    width: 100%; 
     text-align: center;
     color: #7A7280;
     animation: fadeIn 0.4s ease;
@@ -264,112 +261,10 @@ body{
     background-color: #D982A2;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width:768px){
-
-    /* Home */
-
-    #home{
-        padding:40px 20px;
-        min-height:auto;
-    }
-
-    .home-content{
-        width:100%;
-        text-align:center;
-    }
-
-    .profile-picture{
-        width:180px;
-        height:180px;
-    }
-
-    #home h1{
-        font-size:2.3rem;
-        line-height:1.3;
-    }
-
-    .home-status{
-        font-size:1rem;
-    }
-
-    .home-tagline{
-        font-size:0.95rem;
-    }
-
-    .explore-btn{
-        margin-top:28px;
-    }
-
-    /* About */
-
-    .about-container{
-        padding:30px 25px;
-    }
-
-    #about h2,
-    .section-container h2{
-        font-size:2rem;
-    }
-
-    /* Cards */
-
-    .card-wrapper{
-        grid-template-columns:1fr;
-    }
-    .card h3{
-        font-size:0.95rem;
-    }
-
-    /* Social */
-
-    .social-icons{
-        gap:15px;
-        flex-wrap:wrap;
-    }
-
-    .social-icons a{
-        width:55px;
-        height:55px;
-    }
-
-    .social-icons img{
-        width:22px;
-        height:22px;
-    }
-
-    /* About Page */
-
-    #about-hero{
-        padding:70px 20px 50px;
-    }
-
-    #about-hero h1{
-        font-size:2.4rem;
-    }
-
-    .about-page-container h2{
-        font-size:1.7rem;
-    }
-
-    .intro,
-    .quote{
-        text-align:center;
-    }
-
-}
 
 /* Skills */
 .skill-card h3{
     color: #E89AB4;
-}
-
-/* Projects */
-.project-card{
-    text-align: center;
 }
 
 /* Connect */
@@ -440,106 +335,6 @@ footer{
     color: #A09AA7;
 }
 
-/* =========================
-   ABOUT PAGE
-========================= */
-
-#about-hero{
-    padding: 100px 20px 70px;
-    text-align: center;
-}
-
-.flower{
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-#about-hero h1{
-    font-family: 'DM Serif Display', serif;
-    font-size: 2rem;
-    font-weight: normal;
-    margin-bottom: 20px;
-}
-
-.quote{
-    color: #E89AB4;
-    font-size: 1,2rem;
-    font-style: italic;
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.intro{
-    max-width: 580px;
-    margin: auto;
-    text-align: center;
-    color: #7A7280;
-    line-height: 1.9;
-}
-
-.about-page-container{
-    max-width: 850px;
-    margin: auto;
-    padding: 50px 20px;
-}
-
-section{
-    border-bottom: 1px solid #F3E8EE;
-}
-
-section:last-child{
-    border-bottom: none;
-}
-
-.about-page-container h2{
-    font-family: 'DM Serif Display', serif;
-    font-size: 1,2rem;
-    margin-bottom: 25px;
-    color: #4B4453;
-}
-
-.about-text{
-    line-height: 2;
-    color: #7A7280;
-    text-align: justify;
-    margin-bottom: 18px;
-}
-
-.learning-list{
-    padding-left: 25px;
-    line-height: 2;
-    color: #7A7280;
-}
-
-.learning-list li{
-    margin-bottom: 6px;
-}
-
-.closing-quote{
-    text-align: center;
-    color: #E89AB4;
-    font-style: italic;
-    margin: 40px 0;
-}
-
-.back-btn{
-    display: table;
-    margin: 20px auto 0;
-    text-decoration: none;
-    background-color: #E89AB4;
-    color: white;
-    padding: 7px 18px;
-    border-radius: 30px;
-    font-weight: 500;
-    font-size: 0.9rem;
-    transition: .3s;
-}
-
-.back-btn:hover{
-    background-color: #D982A2;
-    transform: translateY(-3px);
-}
-
 /* buat di hp */
 @media (max-width:480px){
 
@@ -567,9 +362,116 @@ section:last-child{
     .section-container{
         padding:55px 18px;
     }
+}
 
-    .about-page-container{
-        padding:40px 18px;
-    }
+/* Love Things Slider */
 
+.slider-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.love-slider {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    min-height: 250px;
+    felx: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.love-slider .love-card {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.love-slider .love-card.active {
+    display: block;
+}
+
+.slider-btn {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #6b4f4f;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: 0.3s;
+}
+
+.slider-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Skills Slider */
+
+.skill-slider {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-slider .skill-card {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skill-slider .skill-card.skill-active {
+    display: block;
+}
+
+/* Projects Slider */
+.project-slider {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-slider .project-card {
+    display: none !important;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.project-slider .project-card.project-active {
+    display: block !important;
+}
+
+.project-link{
+    display: inline-block;
+    margin-top: 18px;
+    padding: 8px 20px;
+    background-color: #E89AB4;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.project-link:hover{
+    background-color: #D982A2;
+    transform: translateY(-3px);
 }
